@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+C:\Users\chuly\Desktop\TPFinal-Marnoni-Bokser Com-5\Nicolas Marnoni-Bokser Ian Com5\.metadata\.plugins\org.eclipse.jdt.core
+2677556422.index
+555137532.index
+2576926961.index
+1865797976.index
+738133618.index
+2357412325.index

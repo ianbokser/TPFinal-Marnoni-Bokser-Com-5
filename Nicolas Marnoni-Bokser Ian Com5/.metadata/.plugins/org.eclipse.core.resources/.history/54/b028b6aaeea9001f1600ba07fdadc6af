@@ -1,0 +1,33 @@
+package tpFinal;
+
+import java.util.Date;
+
+public class VueloPrivado extends Vuelo {
+    private int jetsNecesarios;
+    private double precio;
+
+    public VueloPrivado(String codigo, String origen, String destino, String fecha, int tripulantes, double precio,  int dniComprador, int[] acompaniantes) {
+        super(codigo, origen, destino, fecha, tripulantes);
+        this.codigo = codigo;
+        this.tipo = "PRIVADO";
+        this.precio = precio;
+        this.jetsNecesarios = getJetsNecesarios(acompaniantes);
+    }
+
+    @Override
+    public String getDetalle() {
+        return "Vuelo Privado [Código: " + codigo + ", Origen: " + origen + ", Destino: " + destino +
+               ", Fecha: " + fecha + ", Tripulantes: " + tripulantes + ", Jets Necesarios: " + jetsNecesarios +
+               ", Costo Total: " + calcularCostoTotal() + "]";
+    }
+
+    public double calcularCostoTotal() {
+        double costoBase = precioPorJet * jetsNecesarios;
+        return costoBase * 1.30;
+    }
+    
+    public int getJetsNecesarios(int[] acompaniantes) {
+        cantJets = acompaniantes.length;
+    }
+
+}

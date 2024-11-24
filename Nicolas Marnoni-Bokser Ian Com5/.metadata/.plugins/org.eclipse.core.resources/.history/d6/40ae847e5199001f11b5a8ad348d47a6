@@ -1,0 +1,24 @@
+ackage tpFinal;
+
+public class Asiento {
+    private int numero;
+    private String clase;
+
+    public Asiento(int numero, String clase) {
+        this.numero = numero;
+        this.clase = clase;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getClase() {
+        return clase;
+    }
+
+    @Override
+    public String toString() {
+        return "Asiento " + numero + " (" + clase + ")";
+    }
+}

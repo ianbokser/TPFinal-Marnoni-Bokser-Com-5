@@ -1,0 +1,22 @@
+package tpFinal;
+
+public class VueloNacional extends Vuelo{
+    private double valorRefrigerio;
+
+    public void VueloNacional(String codigo, String origen, String destino, Date fecha, int tripulantes, double valorRefrigerio,
+                         double[] precios, int[] cantAsientos) {
+        super(origen, destino, fecha, tripulantes, precios, cantAsientos);
+        this.valorRefrigerio = valorRefrigerio;
+        this.tipo = "NACIONAL";
+        this.codigo = codigo;
+    }
+
+    @Override
+    public String getDetalle() {
+        return codigo + " - " + origen + " - " + destino + " - " + fecha.toString() + " - " + tipo;
+    }
+
+    public double getValorRefrigerio() {
+        return valorRefrigerio;
+    }
+}
